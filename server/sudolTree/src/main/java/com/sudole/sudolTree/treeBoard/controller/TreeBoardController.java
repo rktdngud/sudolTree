@@ -1,14 +1,13 @@
 package com.sudole.sudolTree.treeBoard.controller;
 
+import com.sudole.sudolTree.treeBoard.dto.TreeBoardPostDto;
 import com.sudole.sudolTree.treeBoard.entity.TreeBoard;
+import com.sudole.sudolTree.treeBoard.mapper.TreeBoardMapper;
 import com.sudole.sudolTree.treeBoard.service.TreeBoardService;
 import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,9 +16,11 @@ import java.util.List;
 public class TreeBoardController {
 
     private final TreeBoardService boardService;
+    private final TreeBoardMapper mapper;
 
-    public TreeBoardController(TreeBoardService boardService) {
+    public TreeBoardController(TreeBoardService boardService, TreeBoardMapper mapper) {
         this.boardService = boardService;
+        this.mapper = mapper;
     }
 
     /* 수돌트리 전체 글 조회 */
@@ -33,5 +34,14 @@ public class TreeBoardController {
     public ResponseEntity getTreeBoard(@PathVariable("treeBoard-id") Long id) {
         TreeBoard treeBoard = boardService.findTreeBoard(id);
         return new ResponseEntity(treeBoard, HttpStatus.OK);
+    }
+
+    /* 수돌 트리 글 작성 */
+    @PostMapping
+    public ResponseEntity createBoard(@RequestBody TreeBoardPostDto treeBoardPostDto) {
+        TreeBoard treeBoard = mapper.treeBoardPostDtoToTreeBoard(treeBoardPostDto);
+        TreeBoard saveTreeBoard = boardService.saveTreeBoard(treeBoard);
+        return new ResponseEntity(mapper.treeBoardToTreeBoardResponseDto(saveTreeBoard), HttpStatus.CREATED);
+
     }
 }

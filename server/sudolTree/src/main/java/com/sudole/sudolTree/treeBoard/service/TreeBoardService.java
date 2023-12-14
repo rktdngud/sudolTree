@@ -2,6 +2,7 @@ package com.sudole.sudolTree.treeBoard.service;
 
 import com.sudole.sudolTree.exception.BusinessLogicException;
 import com.sudole.sudolTree.exception.ExceptionCode;
+import com.sudole.sudolTree.treeBoard.dto.TreeBoardPostDto;
 import com.sudole.sudolTree.treeBoard.entity.TreeBoard;
 import com.sudole.sudolTree.treeBoard.repository.TreeBoardRepository;
 import org.springframework.stereotype.Service;
@@ -28,6 +29,11 @@ public class TreeBoardService {
     /* 수돌트리 특정 글 찾기 */
     public TreeBoard findTreeBoard(Long id) {
         return findVerifiedBoard(id);
+    }
+
+    /* 수돌트리 글 작성 */
+    public TreeBoard saveTreeBoard(TreeBoard treeBoard) {
+        return treeBoardRepository.save(treeBoard);
     }
 
     private TreeBoard findVerifiedBoard(Long id) {
