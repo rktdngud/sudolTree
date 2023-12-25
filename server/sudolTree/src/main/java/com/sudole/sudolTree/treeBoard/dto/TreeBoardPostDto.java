@@ -8,5 +8,6 @@ import lombok.Setter;
 public class TreeBoardPostDto {
     private String nickname;
     private String contents;
+    private int imageIndex;
 
 }

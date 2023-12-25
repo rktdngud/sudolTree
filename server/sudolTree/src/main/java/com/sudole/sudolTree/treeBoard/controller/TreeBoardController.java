@@ -13,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/treeBoards")
+@CrossOrigin(origins = "http://localhost:3000")
 public class TreeBoardController {
 
     private final TreeBoardService boardService;
@@ -42,6 +43,8 @@ public class TreeBoardController {
         TreeBoard treeBoard = mapper.treeBoardPostDtoToTreeBoard(treeBoardPostDto);
         TreeBoard saveTreeBoard = boardService.saveTreeBoard(treeBoard);
         return new ResponseEntity(mapper.treeBoardToTreeBoardResponseDto(saveTreeBoard), HttpStatus.CREATED);
-
+        /* 여기의 사진 index 번호를 저장할 index를 만들어주자
+        * 그리고 Get을 하면 imagee[index]를 해서 골랐던 사진을 보여주자
+        * 생각해보니까 내용을 필요 없을 듯? 닉네임만 보이면 되니까 */
     }
 }

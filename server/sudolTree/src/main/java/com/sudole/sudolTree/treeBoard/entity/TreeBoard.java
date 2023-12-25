@@ -18,4 +18,5 @@ public class TreeBoard {
 
     private String nickname;
     private String contents;
+    private int imageIndex;
 }
