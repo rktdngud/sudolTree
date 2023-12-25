@@ -118,9 +118,12 @@ const SelectedCurrentImage = styled.div`
 const Modal = ({ onClose }) => {
     const [selectedImage, setSelectImage] = useState(null);
     const [isNextModalOpen, setIsNextModalOpen] = useState(false);
+    const [imageIndex, setImageIndex] = useState(null);
 
     const handleImageClick = (index) => {
         setSelectImage(images[index]);
+        setImageIndex(index);
+        
     }
 
     const handleNextButtonClick = () => {
@@ -131,10 +134,7 @@ const Modal = ({ onClose }) => {
         setIsNextModalOpen(false);
 
     }
-
-    
-
-    console.log(selectedImage);
+    console.log(imageIndex);
 
     if(isNextModalOpen) {
         return (
@@ -144,7 +144,7 @@ const Modal = ({ onClose }) => {
                 <SelectedCurrentImage style={{ backgroundImage: `url(${selectedImage})`}}></SelectedCurrentImage>
                 <CloseButton onClick={handleNextModalClose}><ButtonText>이전</ButtonText></CloseButton>
                 {/* <NextButton onClick={onClose}><ButtonText>선물 보내기</ButtonText></NextButton> */}
-                <WriteModal onClose={onClose}/>
+                <WriteModal imgIndex={imageIndex}/>
             </ModalOverlay>
             
         )

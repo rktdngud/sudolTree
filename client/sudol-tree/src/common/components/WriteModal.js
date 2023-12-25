@@ -25,9 +25,11 @@ const NextButton = styled.button`
     background: #DBC3A0;
 `;
 
-const WriteModal = ({onClose}) => {
+const WriteModal = ({imgIndex}) => {
     const [letterTitle, setLetterTitle] = useState("");
     const [letterContent, setLetterContent] = useState("");
+
+    console.log(imgIndex);
 
     const handleTitleChange = (e) => {
         setLetterTitle(e.target.value);
@@ -48,7 +50,7 @@ const WriteModal = ({onClose}) => {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ nickname: letterTitle, contents: letterContent }),
+            body: JSON.stringify({ nickname: letterTitle, contents: letterContent, imageIndex: imgIndex }),
         })
             .then(response => response.json())
             .then(data => {
@@ -80,7 +82,7 @@ const WriteModal = ({onClose}) => {
                 />
             </label>
             <br />
-            <NextButton type="button" onClick={handleFormSubmit} disabled={letterTitle == "" || letterContent == ""} style={{ opacity: letterTitle === "" || letterContent === "" ? 0.5 : 1 }}>Post Letter</NextButton>
+            <NextButton type="button" onClick={handleFormSubmit} disabled={letterTitle === "" || letterContent === ""} style={{ opacity: letterTitle === "" || letterContent === "" ? 0.5 : 1 }}>Post Letter</NextButton>
         </form>
     );
 }
