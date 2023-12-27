@@ -25,6 +25,9 @@ const NextButton = styled.button`
     background: #DBC3A0;
 `;
 
+const NicknameInput = styled.input`
+`
+
 const WriteModal = ({imgIndex}) => {
     const [letterTitle, setLetterTitle] = useState("");
     const [letterContent, setLetterContent] = useState("");
@@ -60,6 +63,8 @@ const WriteModal = ({imgIndex}) => {
             })
             .catch(error => {
                 console.error("Error posting letter:", error);
+                alert("서버 연결에 실패했어요");
+                window.location.reload();
             });
     };
 
@@ -67,8 +72,9 @@ const WriteModal = ({imgIndex}) => {
         <form onSubmit={handleFormSubmit}>
             <label>
                 nickname:
-                <input
+                <NicknameInput
                     type="text"
+                    maxLength="5"
                     value={letterTitle}
                     onChange={handleTitleChange}
                 />

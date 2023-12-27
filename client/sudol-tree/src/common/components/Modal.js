@@ -12,8 +12,8 @@ const ModalOverlay = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    width: 375px;
-    height: 812px;
+    width: 100%;
+    height: 100%;
     // background: rgba(51, 51, 51, 0.9);
     background: #777;
     display: flex;
@@ -23,8 +23,8 @@ const ModalOverlay = styled.div`
 
 const ModalContent = styled.div`
     background: white;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 8px;
     background-size: cover;
 `;
@@ -38,7 +38,6 @@ const CloseButton = styled.button`
     box-sizing:border-box;
     border: 1px solid white;
     border-radius: 10px;
-    
     background: none;
 `;
 
@@ -55,7 +54,7 @@ const NextButton = styled.button`
 
 const RowContainer = styled.div`
     display: flex;
-    bottom: 130px;
+    top: 48%;
     position: absolute;
 `;
 
@@ -75,8 +74,8 @@ const Title = styled.p`
 
 const SelectImage = styled.div`
     position: absolute;
-    width: 160px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
     top: 190px;
     margin-bottom: 240px;
     background-color: white;
@@ -108,12 +107,6 @@ const SelectedCurrentImage = styled.div`
     border-radius: 10px;
 `;
 
-// const images = [
-//     ImageType1,
-//     ImageType2,
-//     ImageType3,
-//     ImageType4
-// ];
 
 const Modal = ({ onClose }) => {
     const [selectedImage, setSelectImage] = useState(null);

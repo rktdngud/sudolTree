@@ -3,22 +3,26 @@ import styled from 'styled-components';
 import background_image from '../../../assets/images/background.png';
 import Button from '../../../common/components/Button';
 import Images from '../../../common/components/Images';
+// import HamburgerModal from '../../../common/components/HamburgerModal';
 
 const Background = styled.div`
-    height: 812px;
-    width: 100%;
+    height: 700px;
+    width: 100vh;
     background-image: url(${background_image});
     background-size: cover;
 `;
 
 const Container = styled.div`
     position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
 `;
 
 const ButtonContainer = styled.div`
     position: absolute;
-    right: 30px;
-    bottom: 30px;
+    right: 24px;
+    bottom: 24px;
 `;
 
 const DataContainer = styled.div`
@@ -33,7 +37,7 @@ const DataContainer = styled.div`
 const DataItem = styled.div`
   border: none;
   width: 100px;
-  height: 100px;
+  height: 140px;
   background-size: cover;
   margin: 20px;
   border-radius: 8px;
@@ -74,8 +78,8 @@ export default function Home() {
 
     return (
         <>
-            <Container>
-                <Background />
+            <Container style={{backgroundImage: `url(${background_image})`}}>
+                {/* <Background /> */}
                 <DataContainer>
                     {data.map((item, index) => (
                         <DataItem key={index}>
@@ -87,6 +91,7 @@ export default function Home() {
                 <ButtonContainer>
                     <Button />
                 </ButtonContainer>
+                {/* <HamburgerModal /> */}
                 
             </Container>
         </>

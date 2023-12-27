@@ -23,4 +23,4 @@ const ButtonContainer = styled.button`
     padding: 16px 40px;
     font-size: 24px;
     color: #333;
-`
+`;
