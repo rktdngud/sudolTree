@@ -13,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/postBoards")
+@CrossOrigin(origins = "http://localhost:3000")
 public class PostBoardController {
 
     private final PostBoardService boardService;
