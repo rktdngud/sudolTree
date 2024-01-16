@@ -15,10 +15,11 @@ const HamburgerButton = styled.div`
     width: 48px;
     height: 48px;
     background-color: none;
-    top: 40px;
+    top: 28px;
     right: 24px;
     padding: 20px;
     background-size: cover;
+    cursor: pointer;
 `;
 
 const Modal = styled.div`
@@ -44,6 +45,7 @@ const Menu = styled.p`
     font-size: 20px;
     text-align: right;
     margin: 20px 24px;
+    cursor: pointer;
 `;
 
 

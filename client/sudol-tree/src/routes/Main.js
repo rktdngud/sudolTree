@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Home from '../pages/Home/views/Home';
-import Community from '../pages/Home/Community';
+import Community from '../pages/Home/views/Community';
 import HamburgerModal from '../common/components/HamburgerModal';
 import CloseButton from '../assets/images/burger-bar.png';
 import styled from 'styled-components';
@@ -11,9 +11,10 @@ const HamburgerButton = styled.div`
     height: 48px;
     padding: 20px;
     background-color: none;
-    top: 40px;
+    top: 28px;
     right: 24px;
     background-size: cover;
+    cursor: pointer;
 `;
 
 const Container = styled.div`
@@ -45,7 +46,7 @@ export default function Main() {
     return (
         <Container>
             {!communityPage &&            
-            <Home></Home>
+            <Home />
             }
 
             {communityPage&& 

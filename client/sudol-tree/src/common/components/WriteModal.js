@@ -1,28 +1,34 @@
 import React, {useState} from "react";
 import styled from "styled-components";
 
-const CloseButton = styled.button`
-    position: absolute;
-    bottom: 40px;
-    left: 20px;
-    width: 100px;
-    height: 48px;
-    box-sizing:border-box;
-    border: 1px solid white;
-    border-radius: 10px;
+// const CloseButton = styled.button`
+//     position: absolute;
+//     bottom: 40px;
+//     left: 20px;
+//     width: 100px;
+//     height: 48px;
+//     box-sizing:border-box;
+//     border: 1px solid white;
+//     border-radius: 10px;
     
-    background: none;
-`;
+//     background: none;
+// `;
 
 const NextButton = styled.button`
     position: absolute;
     bottom: 40px;
     right: 20px;
-    width: 220px;
-    height: 48px;
+    // width: 220px;
+    width: 60%;
+    // height: 48px;
+    height: 7%;
     border-radius: 10px;
     border: none;
     background: #DBC3A0;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
 `;
 
 const NicknameInput = styled.input`
@@ -88,7 +94,7 @@ const WriteModal = ({imgIndex}) => {
                 />
             </label>
             <br />
-            <NextButton type="button" onClick={handleFormSubmit} disabled={letterTitle === "" || letterContent === ""} style={{ opacity: letterTitle === "" || letterContent === "" ? 0.5 : 1 }}>Post Letter</NextButton>
+            <NextButton type="button" onClick={handleFormSubmit} disabled={letterTitle === "" || letterContent === ""} style={{ opacity: letterTitle === "" || letterContent === "" ? 0.5 : 1 }}>선물 전달하기</NextButton>
         </form>
     );
 }

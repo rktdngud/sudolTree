@@ -6,7 +6,10 @@ export default function Button() {
     const [isModalOpen, setModalOpen] = useState(false);
 
     const openModal = () => setModalOpen(true);
-    const closeModal = () => setModalOpen(false);
+    const closeModal = () => {
+        window.location.reload();
+        setModalOpen(false);
+    }
 
     return (
         <>
@@ -21,6 +24,8 @@ export default function Button() {
 const ButtonContainer = styled.button`
     border-radius: 10px;
     padding: 16px 40px;
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: bold;
     color: #333;
+    cursor: pointer;
 `;

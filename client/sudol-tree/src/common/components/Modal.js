@@ -14,7 +14,6 @@ const ModalOverlay = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    // background: rgba(51, 51, 51, 0.9);
     background: #777;
     display: flex;
     justify-content: center;
@@ -27,29 +26,36 @@ const ModalContent = styled.div`
     height: 100px;
     border-radius: 8px;
     background-size: cover;
+    cursor: pointer;
 `;
 
 const CloseButton = styled.button`
     position: absolute;
     bottom: 40px;
     left: 20px;
-    width: 100px;
-    height: 48px;
+    // width: 100px;
+    width: 24%;
+    // height: 48px;
+    height: 7%;
     box-sizing:border-box;
     border: 1px solid white;
     border-radius: 10px;
     background: none;
+    cursor: pointer;
 `;
 
 const NextButton = styled.button`
     position: absolute;
     bottom: 40px;
     right: 20px;
-    width: 220px;
-    height: 48px;
+    // width: 220px;
+    width: 60%;
+    // height: 48px;
+    height: 7%;
     border-radius: 10px;
     border: none;
     background: #DBC3A0;
+    cursor: pointer;
 `;
 
 const RowContainer = styled.div`
