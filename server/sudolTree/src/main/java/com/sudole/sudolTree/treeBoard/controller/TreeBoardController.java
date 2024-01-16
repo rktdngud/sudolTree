@@ -5,6 +5,8 @@ import com.sudole.sudolTree.treeBoard.entity.TreeBoard;
 import com.sudole.sudolTree.treeBoard.mapper.TreeBoardMapper;
 import com.sudole.sudolTree.treeBoard.service.TreeBoardService;
 import lombok.NoArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -26,8 +28,8 @@ public class TreeBoardController {
 
     /* 수돌트리 전체 글 조회 */
     @GetMapping
-    public List<TreeBoard> getTreeBoards() {
-        return boardService.findTreeBoards();
+    public Page<TreeBoard> getTreeBoards(Pageable pageable) {
+        return boardService.findTreeBoards(pageable);
     }
 
     /* 수돌트리 특정 글 조회 */
