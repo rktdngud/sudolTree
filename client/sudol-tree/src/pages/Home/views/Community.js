@@ -56,14 +56,23 @@ export default function Community() {
 
     const dataContainerRef = useRef(null);
 
+    useEffect(() => {
+      // DataContainer의 높이 측정
+      const containerHeight = dataContainerRef.current.clientHeight;
+      setWindowHeight(containerHeight);
+    }, [data]);
+
     const scrollToTop = () => {
+      
         const scroller = document.getElementById("scroller");
+        console.log(scroller);
         if (scroller) {
             scroller.scrollTo({
             top: windowHeight,
             behavior: 'smooth',
             });
         }
+        console.log(scroller);
       }
 
     useEffect(() => {
@@ -84,11 +93,7 @@ export default function Community() {
       fetchData();
     }, [data]);
 
-    useEffect(() => {
-        // DataContainer의 높이 측정
-        const containerHeight = dataContainerRef.current.clientHeight;
-        setWindowHeight(containerHeight);
-      }, [data]);
+    
     
 
 
@@ -96,7 +101,7 @@ export default function Community() {
         <>
             <Container id="scroller">
                 <Title onClick={scrollToTop}>난 아래에 있어</Title>
-                <DataContainer ref={dataContainerRef} style={{height: (data.length+1)*114}}>
+                <DataContainer ref={dataContainerRef} style={{height: (data.length+1)*120}}>
                     {data.map((item, index) => (
                         <DataItem key={index}>
                             <Nickname>{item.nickname}</Nickname>

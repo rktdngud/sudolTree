@@ -86,14 +86,19 @@ const CommunityForm = ({onScroll}) => {
         setLetterContent(e.target.value);
     };
 
+    const onClickEvents = (e) => {
+        handleFormSubmit(e);
+        onScroll();
+    }
+
     const handleFormSubmit = (e) => {
         e.preventDefault();
 
         const apiEndpoint = "http://localhost:8080/postBoards";
 
         console.log("letterTitle:", letterTitle);
-    console.log("letterContent:", letterContent);
-    console.log("letterPassword:", letterPassword);
+        console.log("letterContent:", letterContent);
+        console.log("letterPassword:", letterPassword);
 
         // POST
         fetch(apiEndpoint, {
@@ -149,7 +154,7 @@ const CommunityForm = ({onScroll}) => {
             </label>
             </LeftDiv>
             <RightDiv>
-                <Button type="button" onClick={handleFormSubmit} disabled={letterTitle === "" || letterContent === "" || letterPassword === "" } style={{ opacity: letterTitle === "" || letterContent === "" ? 0.5 : 1 }}>전송</Button>
+                <Button type="button" onClick={onClickEvents} disabled={letterTitle === "" || letterContent === "" || letterPassword === "" } style={{ opacity: letterTitle === "" || letterContent === "" ? 0.5 : 1 }}>전송</Button>
             </RightDiv>
         </Form>
         </>
