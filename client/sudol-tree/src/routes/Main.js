@@ -6,6 +6,7 @@ import CloseButton from '../assets/images/burger-bar.png';
 import styled from 'styled-components';
 
 const HamburgerButton = styled.div`
+    opacity:0.8;
     position: absolute;
     width: 48px;
     height: 48px;

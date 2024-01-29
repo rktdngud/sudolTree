@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import WriteModal from './WriteModal';
-import ImageType1 from '../../assets/images/sudol.e.png';
-import ImageType2 from '../../assets/images/sudol.e.png';
-import ImageType3 from '../../assets/images/sudol.e.png';
-import ImageType4 from '../../assets/images/sudol.e.png';
+import ImageType1 from '../../assets/images/sudols/sudol1.png';
+import ImageType2 from '../../assets/images/sudols/sudol2.png';
+import ImageType3 from '../../assets/images/sudols/sudol3.png';
+import ImageType4 from '../../assets/images/sudols/sudol4.png';
+import Image2 from '../../assets/images/image2.png';
 import images from './Images';
 
 
@@ -14,7 +15,10 @@ const ModalOverlay = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: #777;
+    background: #FFF1B7;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +28,8 @@ const ModalContent = styled.div`
     background: white;
     width: 100px;
     height: 100px;
-    border-radius: 8px;
+    border: 2px solid black;
+    border-radius: 60px;
     background-size: cover;
     cursor: pointer;
 `;
@@ -80,13 +85,14 @@ const Title = styled.p`
 
 const SelectImage = styled.div`
     position: absolute;
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
     top: 190px;
     margin-bottom: 240px;
     background-color: white;
+    border: 4px solid green;
     background-size: cover;
-    border-radius: 8px;
+    border-radius: 80px;
 `;
 
 const ButtonText = styled.p`
@@ -101,6 +107,7 @@ const Gauge = styled.div`
     top: 0;
     width: 100%;
     heigth: 100px;
+
 `;
 
 const SelectedCurrentImage = styled.div`
@@ -138,7 +145,7 @@ const Modal = ({ onClose }) => {
     if(isNextModalOpen) {
         return (
             <ModalOverlay>
-                <Gauge><div style={{width: '100%', backgroundColor: '#DBC3A0'}}><br/></div></Gauge>
+                <Gauge><div style={{width: '100%', backgroundColor: '#DBC3A0', transition: "width 1s ease-in-out"}}><br/></div></Gauge>
                 {/* <Title>선물 고마워!!</Title> */}
                 <SelectedCurrentImage style={{ backgroundImage: `url(${selectedImage})`}}></SelectedCurrentImage>
                 <CloseButton onClick={handleNextModalClose}><ButtonText>이전</ButtonText></CloseButton>
@@ -151,10 +158,10 @@ const Modal = ({ onClose }) => {
 
 
     return (
-        <ModalOverlay>
-            <Gauge><div style={{width: '50%', backgroundColor: '#DBC3A0'}}><br/></div></Gauge>
+        <ModalOverlay style={{ backgroundImage: `url(${Image2})`}}>
+            <Gauge><div style={{width: '50%', backgroundColor: '#DBC3A0', transition: "width 1s ease-in-out"}}><br/></div></Gauge>
             <CloseButton onClick={onClose}><ButtonText>닫기</ButtonText></CloseButton>
-            <Title> <span style={{color: 'brown'}}>수돌이</span>에게 <br/>주고싶은  <br />  선물을 선택해주세요!</Title>
+            <Title> <span style={{color: '#AB9A8A'}}>수돌이</span>에게 <br/>주고싶은  <br />  선물을 선택해주세요!</Title>
             <SelectImage style={{ backgroundImage: `url(${selectedImage})`}}></SelectImage>
             <RowContainer>
                 <ColumnContainer>

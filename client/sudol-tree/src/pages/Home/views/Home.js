@@ -35,7 +35,7 @@ const DataContainer = styled.div`
   width: 300px;
   justify-content: center; 
   align-items: center;
-  top: 50%;
+  top: 54%;
   left: 50%; 
   transform: translate(-50%, -50%); 
 `;
@@ -51,8 +51,10 @@ const DataItem = styled.div`
 
 const Nickname = styled.p`
   width: 100px;
-  color: white;
+  color: #AB9A8A;
+  font-weight: bold;
   text-align: center;
+  font-size: 24px;
 `;
 
 const PresentImg = styled.img`
@@ -63,14 +65,15 @@ const PresentImg = styled.img`
 
 const PageButton = styled.div`
     position: absolute;
-    width: 60px;
-    height: 100px;
+    width: 40px;
+    height: 66px;
     background-color: none;
     background-size: cover;
     background-position: center; 
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+    opacity: 0.8;
 `;
 
 
@@ -108,7 +111,7 @@ export default function Home() {
 
     return (
         <>
-            <Container style={{backgroundImage: `url(${background_image})`}}>
+            <Container style={{backgroundColor: "#FFF1B7" ,backgroundImage: `url(${background_image})`, backgroundPosition: "top center", backgroundSize: "1440px 1024px", backgroundRepeat: "no-repeat"}}>
               
                 {/* <Background /> */}
                 <DataContainer>
@@ -119,8 +122,8 @@ export default function Home() {
                         </DataItem>
                     ))}
                 </DataContainer>
-                { page != 0 && <PageButton onClick={() => handlePageChange(page-1)} style={{backgroundImage: `url(${Left})`, left: '0'}} />}
-                { page+1 != totalPages && totalPages != 0 && <PageButton onClick={() => handlePageChange(page+1)} style={{backgroundImage: `url(${Next})`, right: '0'}} />}
+                { page != 0 && <PageButton onClick={() => handlePageChange(page-1)} style={{backgroundImage: `url(${Left})`, left: '20px'}} />}
+                { page+1 != totalPages && totalPages != 0 && <PageButton onClick={() => handlePageChange(page+1)} style={{backgroundImage: `url(${Next})`, right: '20px'}} />}
                 <ButtonContainer>
                     <Button />
                 </ButtonContainer>
