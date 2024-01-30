@@ -64,8 +64,10 @@ const HamburgerModal = ({openPage, closePage, closeHam }) => {
     };
 
     const handlePage = () => {
-        openPage();
-        handleOpenModal();
+        alert("아직 준비 중인 기능이에요");
+        window.location.reload();
+        // openPage();
+        // handleOpenModal();
     }
     
     const handleClosePage = () => {

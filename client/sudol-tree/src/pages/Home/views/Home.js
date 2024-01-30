@@ -86,7 +86,7 @@ export default function Home() {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await fetch(`http://localhost:8080/treeBoards?page=${page}&size=${pageSize}`);
+          const response = await fetch(`http://54.180.225.125:8080/treeBoards?page=${page}&size=${pageSize}`);
           if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
           }

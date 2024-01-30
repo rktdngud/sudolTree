@@ -85,8 +85,8 @@ const Title = styled.p`
 
 const SelectImage = styled.div`
     position: absolute;
-    width: 160px;
-    height: 160px;
+    width: 140px;
+    height: 140px;
     top: 190px;
     margin-bottom: 240px;
     background-color: white;
