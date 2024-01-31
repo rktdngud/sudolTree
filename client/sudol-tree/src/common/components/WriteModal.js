@@ -51,7 +51,7 @@ const WriteModal = ({imgIndex}) => {
     const handleFormSubmit = (e) => {
         e.preventDefault();
 
-        const apiEndpoint = "http://54.180.225.125:8080/treeBoards";
+        const apiEndpoint = "https://54.180.225.125:8080/treeBoards";
 
         // POST
         fetch(apiEndpoint, {
