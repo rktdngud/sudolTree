@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "./static/js/main.d0bae0ef.js",
-    "static/media/sudol3.png": "./static/media/sudol3.9dc2b05950271d28aa8a.png",
-    "static/media/sudol4.png": "./static/media/sudol4.a94240942c48ccc6b2d6.png",
-    "static/media/sudol1.png": "./static/media/sudol1.63e367616738f4d29637.png",
-    "static/media/sudol2.png": "./static/media/sudol2.2d1e2656e299f4ae78e3.png",
-    "static/media/background.png": "./static/media/background.117154d89ebd4315b651.png",
-    "static/media/image2.png": "./static/media/image2.43f380e3b43a36c51826.png",
-    "static/media/sudol.e.png": "./static/media/sudol.e.62b9bcff2fe189bd40b8.png",
-    "index.html": "./index.html",
-    "main.d0bae0ef.js.map": "./static/js/main.d0bae0ef.js.map"
+    "main.js": "/sudolTree/static/js/main.66fa6b67.js",
+    "static/media/sudol3.png": "/sudolTree/static/media/sudol3.9dc2b05950271d28aa8a.png",
+    "static/media/sudol4.png": "/sudolTree/static/media/sudol4.a94240942c48ccc6b2d6.png",
+    "static/media/sudol1.png": "/sudolTree/static/media/sudol1.63e367616738f4d29637.png",
+    "static/media/sudol2.png": "/sudolTree/static/media/sudol2.2d1e2656e299f4ae78e3.png",
+    "static/media/background.png": "/sudolTree/static/media/background.117154d89ebd4315b651.png",
+    "static/media/image2.png": "/sudolTree/static/media/image2.43f380e3b43a36c51826.png",
+    "static/media/sudol.e.png": "/sudolTree/static/media/sudol.e.62b9bcff2fe189bd40b8.png",
+    "index.html": "/sudolTree/index.html",
+    "main.66fa6b67.js.map": "/sudolTree/static/js/main.66fa6b67.js.map"
   },
   "entrypoints": [
-    "static/js/main.d0bae0ef.js"
+    "static/js/main.66fa6b67.js"
   ]
 }
