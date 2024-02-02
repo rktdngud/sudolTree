@@ -35,7 +35,7 @@
 - 프론트엔드 및 백엔드 개발
 - AWS 배포
 
-## 4. 관련 블로깅
+## 5. 관련 블로깅
 <h3>배포 관련 블로깅</h3>
 - https://velog.io/@rktdngud/AWS-%ED%94%84%EB%A6%AC%ED%8B%B0%EC%96%B4%EB%A5%BC-%EC%8D%A8%EB%B3%B4%EC%9E%90-1-%ED%94%84%EB%A6%AC%ED%8B%B0%EC%96%B4%EC%97%90-%EB%8C%80%ED%95%9C-%EC%9D%B4%ED%95%B4 </br></br>
 - https://velog.io/@rktdngud/AWS-%ED%94%84%EB%A6%AC%ED%8B%B0%EC%96%B4%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EC%9E%90-2-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%EB%A5%BC-%EC%83%9D%EC%84%B1%ED%95%98%EC%9E%90</br></br>
